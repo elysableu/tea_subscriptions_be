@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_10_231812) do
+ActiveRecord::Schema[7.2].define(version: 2025_03_10_234609) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,13 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_10_231812) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "customers_subscriptions", id: false, force: :cascade do |t|
+    t.bigint "subscription_id", null: false
+    t.bigint "customer_id", null: false
+    t.index ["customer_id", "subscription_id"], name: "idx_on_customer_id_subscription_id_e097da8559"
+    t.index ["subscription_id", "customer_id"], name: "idx_on_subscription_id_customer_id_b60019626b"
+  end
+
   create_table "subscriptions", force: :cascade do |t|
     t.string "title"
     t.decimal "price", precision: 10, scale: 2
@@ -30,6 +37,13 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_10_231812) do
     t.string "frequency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "subscriptions_teas", id: false, force: :cascade do |t|
+    t.bigint "subscription_id", null: false
+    t.bigint "tea_id", null: false
+    t.index ["subscription_id", "tea_id"], name: "index_subscriptions_teas_on_subscription_id_and_tea_id"
+    t.index ["tea_id", "subscription_id"], name: "index_subscriptions_teas_on_tea_id_and_subscription_id"
   end
 
   create_table "teas", force: :cascade do |t|
