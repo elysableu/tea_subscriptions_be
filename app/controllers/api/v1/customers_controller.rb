@@ -1,3 +1,3 @@
-class Api::V1::Customers < ApplicationRecord
+class Api::V1::CustomersController < ApplicationController
   
 end

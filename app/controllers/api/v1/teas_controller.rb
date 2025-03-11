@@ -1,3 +1,3 @@
-class Api::V1::Teas < ApplicationRecord
+class Api::V1::TeasController < ApplicationController
   
 end
