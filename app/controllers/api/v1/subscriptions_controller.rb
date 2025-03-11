@@ -7,4 +7,8 @@ class Api::V1::SubscriptionsController < ApplicationController
     subscription = Subscription.find(params[:id])
     render json: SubscriptionSerializer.new(subscription, include: [:teas, :customers]).serializable_hash
   end
+
+  def update
+    render json: Subscription.update(params[:id], params.require(:subscription).permit(:status))
+  end
 end
