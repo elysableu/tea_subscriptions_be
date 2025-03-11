@@ -1,4 +1,4 @@
-class CustomerApiSerialzer
+class CustomerSerializer
   include JSONAPI::Serializer
 
   attributes  :id,

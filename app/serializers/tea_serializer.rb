@@ -1,4 +1,4 @@
-class TeaApiSerialzer
+class TeaSerializer
   include JSONAPI::Serializer
 
   attributes  :id,

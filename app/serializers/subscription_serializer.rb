@@ -6,4 +6,7 @@ class SubscriptionSerializer
               :price,
               :status,
               :frequency
+
+  has_many :teas, serializer: TeaSerializer
+  has_many :customers, serializer: CustomerSerializer
 end
