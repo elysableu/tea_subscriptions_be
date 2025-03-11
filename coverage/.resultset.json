@@ -1,0 +1,113 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/customer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/subscription_customer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/subscription_customer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/subscription_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/subscription.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/subscription_tea_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/subscription_tea.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/tea_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/tea.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/requests/api/v1/subscription_request_spec.rb": {
+        "lines": [
+
+        ]
+      }
+    },
+    "timestamp": 1741660183
+  }
+}
