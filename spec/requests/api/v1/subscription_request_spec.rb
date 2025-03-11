@@ -136,5 +136,20 @@ RSpec.describe "Subscriptions Endpoints" do
         end
       end
     end
+
+    describe "PATCH subscription to change the active status of a subscription" do
+      it "changes a susbscription status to canceled" do
+        status_update = {status: "canceled"}
+
+        patch "/api/v1/susbcriptions/#{@sub1.id}", headers: {"CONTENT_TYPE" => "application/json"}, params: JSON.generate({ subscription: status_update})
+
+        expect(response).to be_successful
+
+        subscription = Subscription.find(@sub1.id)
+
+        expect(subscription.status).to_not eq("active")
+        expect(subscription.status).to eq("canceled")
+      end
+    end
   end
 end
