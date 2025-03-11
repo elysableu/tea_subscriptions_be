@@ -1,0 +1,314 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/customer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/subscription_customer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/subscription_customer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/subscription_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/subscription.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/subscription_tea_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/subscription_tea.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/models/tea_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/models/tea.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/spec/requests/api/v1/subscription_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          4,
+          4,
+          4,
+          null,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          4,
+          4,
+          null,
+          4,
+          4,
+          4,
+          null,
+          4,
+          4,
+          4,
+          4,
+          null,
+          4,
+          4,
+          4,
+          null,
+          4,
+          4,
+          4,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          3,
+          3,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          5,
+          5,
+          null,
+          5,
+          3,
+          3,
+          3,
+          3,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          5,
+          5,
+          null,
+          5,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/controllers/api/v1/subscriptions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          3,
+          3,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/serializers/subscription_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/serializers/tea_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/elysa/Turing/Mod3/final/tea_subscriptions_be/app/serializers/customer_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1741666468
+  }
+}
