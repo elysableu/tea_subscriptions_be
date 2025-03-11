@@ -53,4 +53,58 @@ RSpec.describe "Subscriptions Endpoints" do
       end
     end
   end
+
+  describe "GET details for one subscription" do
+    get "/api/v1/subscriptions/0"
+
+    expect(response).to be_successful
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    subscription = json[:data]
+
+    # Returns subscription deletes
+    expect(subscription[:id]).to eq('0')
+    expect(subscription[:type]).to eq("subscription")
+    expect(subscription[:attributes][:title]).to eq('Afternoon tea time')
+    expect(subscription[:attributes][:price]).to eq('14.99')
+    expect(subscription[:attributes][:status]).to eq('active')
+    expect(subscription[:attributes][:frequency]).to eq('every month')
+
+    # Returns subscriptions relationships
+    expect(subscription[:relationships]).to have_key :teas
+    
+    subscription[:relationships[:teas][:data]].each do |tea|
+      expect(tea).to have_key :id
+      expect(tea).to have_key :type
+      expect(tea[:type]).to eq('tea')
+    end
+    
+    expect(subscription[:relationships]).to have_key :customers
+
+    expect(subscription[:relationships][:customers][:data]).each do |customer|
+      expect(customer).to have_key :id
+      expect(customer).to have_key :type
+      expect(customer[:type]).to eq('customer')
+    end
+
+    # Returns Subscription_Teas and Subscription_Customers details
+    expect(subscription[:included].count).to eq(5)
+    
+    subscription[:included].each do |entry|
+      expect(entry).to have_key :id
+      expect(entry).to have_key :type
+
+      if entry[:type] === 'tea'
+        expect(entry[:attributes]).to have_key :title
+        expect(entry[:attributes]).to have_key :description
+        expect(entry[:attributes]).to have_key :temperature
+        expect(entry[:attributes]).to have_key :brew_time
+      else
+        expect(entry[:attributes]).to have_key :first_name
+        expect(entry[:attributes]).to have_key :last_name
+        expect(entry[:attributes]).to have_key :email
+        expect(entry[:attributes]).to have_key :address
+      end
+    end
+  end
 end
