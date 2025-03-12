@@ -14,7 +14,7 @@ RSpec.describe "Subscriptions Endpoints" do
     Tea.create!(title: "Velvet Truffle", description: "Black time with raspberry and dark chocolate", temperature: 200.00, brew_time: "3-5 minutes")
 
     @sub1 = Subscription.create!(title: "Afternoon tea time", price: 14.99, status: "active", frequency: "every month")
-    @sub2 = Subscription.create!(title: "Around the World", price: 24.99, status: "active", frequency: "every two months")
+    @sub2 = Subscription.create!(title: "Around the World", price: 24.99, status: "canceled", frequency: "every two months")
 
     customers = Customer.all
     subscriptions = Subscription.all
@@ -141,7 +141,9 @@ RSpec.describe "Subscriptions Endpoints" do
       it "changes a susbscription status to canceled" do
         status_update = {status: "canceled"}
 
-        patch "/api/v1/subscriptions/#{@sub1.id}", headers: {"CONTENT_TYPE" => "application/json"}, params: JSON.generate({ subscription: status_update})
+        patch "/api/v1/subscriptions/#{@sub1.id}", 
+          headers: {"CONTENT_TYPE" => "application/json"}, 
+          params: JSON.generate({ subscription: status_update})
         
         expect(response).to be_successful
 
@@ -150,6 +152,34 @@ RSpec.describe "Subscriptions Endpoints" do
         expect(subscription.status).to_not eq("active")
         expect(subscription.status).to eq("canceled")
       end
+    end
+  end
+
+  describe "Sad Paths" do
+    it "returns an error if subscription can not be found" do
+        test_id = 999
+
+        get "/api/v1/subscriptions/#{test_id}"
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(response).to have_http_status(:bad_request)
+        expect(json[:message]).to eq("Subscription not found!")
+        expect(json[:status]).to eq(400)
+    end
+
+    it "returns an error if user tries to set status to cancelled when it already is" do
+      status_update = {status: "canceled"}
+
+      patch "/api/v1/subscriptions/#{@sub2.id}", 
+        headers: {"CONTENT_TYPE" => "application/json"}, 
+        params: JSON.generate({ subscription: status_update})
+
+        json = JSON.parse(response.body, symbolize_names: true)
+
+        expect(response).to have_http_status(:bad_request)
+        expect(json[:message]).to eq("Subscription already canceled!")
+        expect(json[:status]).to eq(400)
     end
   end
 end
