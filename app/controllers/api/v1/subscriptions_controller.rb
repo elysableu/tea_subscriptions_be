@@ -9,6 +9,11 @@ class Api::V1::SubscriptionsController < ApplicationController
   end
 
   def update
-    render json: Subscription.update(params[:id], params.require(:subscription).permit(:status)), status: :ok
+    validate_status = Subscription.valid_status?(params[:id])
+    if validate_status
+      render json: Subscription.update(params[:id], params.require(:subscription).permit(:status)), status: :ok
+    else
+      render json: ErrorSerializer.format_error({message: "Subscription already canceled!", status: 400}), status: :bad_request
+    end
   end
 end

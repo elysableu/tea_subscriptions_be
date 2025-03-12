@@ -11,4 +11,13 @@ class Subscription < ApplicationRecord
 
   has_many :subscription_teas
   has_many :teas, through: :subscription_teas
+
+  def self.valid_status?(id)
+    subscription = Subscription.find(id)
+    if subscription.status == "active"
+      return true
+    else
+      return false
+    end
+  end
 end
