@@ -162,10 +162,10 @@ RSpec.describe "Subscriptions Endpoints" do
         get "/api/v1/subscriptions/#{test_id}"
 
         json = JSON.parse(response.body, symbolize_names: true)
-
-        expect(response).to have_http_status(:bad_request)
+        
+        expect(response).to have_http_status(:not_found)
         expect(json[:message]).to eq("Subscription not found!")
-        expect(json[:status]).to eq(400)
+        expect(json[:status]).to eq(404)
     end
 
     it "returns an error if user tries to set status to cancelled when it already is" do
