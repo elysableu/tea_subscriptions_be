@@ -17,7 +17,7 @@ Tea.create!(title: "Autumn Chai", description: "Vanilla and spice chai", tempera
 Tea.create!(title: "Tropical Bliss", description: "Coconut and lychee green tea" , temperature: 170.00, brew_time: "2-3 minutes")
 Tea.create!(title: "Sweet Biscotti", description: "Almond and vanilla black tea", temperature: 200.00, brew_time: "3-5 minutes")
 Tea.create!(title: "English Garden", description: "Rose petal black tea", temperature: 200.00, brew_time: "3-5 minutes")
-Tea.create!(title: "Velvet Truffle", description: "Black time with raspberry and dark chocolate", temperature: 200.00, brew_time: "3-5 minutes")
+Tea.create!(title: "Velvet Truffle", description: "Black tea with raspberry and dark chocolate", temperature: 200.00, brew_time: "3-5 minutes")
 
 Subscription.create!(title: "Afternoon tea time", price: 14.99, status: "active", frequency: "every month")
 Subscription.create!(title: "Around the World", price: 24.99, status: "active", frequency: "every two months")
